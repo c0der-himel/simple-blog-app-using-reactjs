@@ -12,14 +12,14 @@ const Home = () => {
         <div className="row">
           <div className="col-8 offset-2">
             <div className="home my-5 pt-5">
-              {errors && (
-                <div className="text-center alert-danger m-5 px-3 pt-3 pb-1 rounded-3 shadow">
-                  <p className="lead">{errors}</p>
-                </div>
-              )}
               {isLoading && (
                 <div>
                   <p className="lead">Loading . . .</p>
+                </div>
+              )}
+              {errors && (
+                <div className="text-center alert-danger m-5 px-3 pt-3 pb-1 rounded-3 shadow">
+                  <p className="lead">{errors}</p>
                 </div>
               )}
               {blogs && <BlogList blogs={blogs} title="All Blogs" />}
