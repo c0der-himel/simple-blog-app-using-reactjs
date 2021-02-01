@@ -1,0 +1,22 @@
+{
+  "blogs": [
+    {
+      "id": 1,
+      "title": "ReactJS",
+      "author": "Facebook",
+      "body": "Front End Library.\n Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis est aspernatur dolorum rerum repellendus deserunt cumque odit nam blanditiis eligendi?\n Unde id quo mollitia ullam quibusdam esse accusamus veniam. Fuga!"
+    },
+    {
+      "id": 2,
+      "title": "ExpressJS",
+      "author": "IBM",
+      "body": "Back End Framework.\n Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis est aspernatur dolorum rerum repellendus deserunt cumque odit nam blanditiis eligendi?\n Unde id quo mollitia ullam quibusdam esse accusamus veniam. Fuga!"
+    },
+    {
+      "id": 3,
+      "title": "VueJS",
+      "author": "Evan You",
+      "body": "Front End Framework.\n Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis est aspernatur dolorum rerum repellendus deserunt cumque odit nam blanditiis eligendi?\n Unde id quo mollitia ullam quibusdam esse accusamus veniam. Fuga!"
+    }
+  ]
+}
