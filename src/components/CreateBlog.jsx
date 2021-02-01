@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 const CreateBlog = () => {
+  const history = useHistory();
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('Evan You');
   const [body, setBody] = useState('');
@@ -19,6 +21,7 @@ const CreateBlog = () => {
     }).then(() => {
       setLoading(false);
       console.log('Blog added');
+      history.push('/');
     });
   };
 

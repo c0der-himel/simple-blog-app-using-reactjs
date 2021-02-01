@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import useFetch from '../hooks/useFetch';
 
 const BlogDetails = () => {
@@ -6,6 +6,15 @@ const BlogDetails = () => {
   const { data: blog, isLoading, errors } = useFetch(
     `http://localhost:5000/blogs/${id}`
   );
+  const history = useHistory();
+
+  const handleClick = () => {
+    fetch(`http://localhost:5000/blogs/${id}`, {
+      method: 'DELETE',
+    }).then(() => {
+      history.push('/');
+    });
+  };
 
   return (
     <section className="Blog-Details">
@@ -32,6 +41,12 @@ const BlogDetails = () => {
                 {blog && (
                   <article>
                     <div className="blog-title">
+                      <button
+                        className="btn btn-dark float-end mt-4"
+                        onClick={handleClick}
+                      >
+                        Delete
+                      </button>
                       <h2>{blog.title}</h2>
                       <p>
                         Written By: <strong>{blog.author}</strong>
